@@ -106,7 +106,7 @@ class MainMenuState extends MusicBeatState
 		add(magenta);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
-		var menuItem:FlxSprite = new FlxSprite(0,0)
+		var menuItem:FlxSprite = new FlxSprite(0,0);
 		add(menuItems);
 
 		for (i in 0...optionShit.length)
