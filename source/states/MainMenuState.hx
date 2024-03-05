@@ -106,6 +106,7 @@ class MainMenuState extends MusicBeatState
 		add(magenta);
 
 		menuItems = new FlxTypedGroup<FlxSprite>();
+		var menuItem:FlxSprite = new FlxSprite(0,0)
 		add(menuItems);
 
 		for (i in 0...optionShit.length)
@@ -119,7 +120,6 @@ class MainMenuState extends MusicBeatState
 				menuItem.animation.addByPrefix('selected', optionShit[i] + " white", 24);
 				menuItem.animation.play('idle');
 				menuItem.ID = i;
-				menuItem.screenCenter(X);
 				menuItems.add(menuItem);
 				menuItem.scrollFactor.set(0.5, 0.5);
 				menuItem.antialiasing = true;
