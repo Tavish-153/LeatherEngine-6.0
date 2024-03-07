@@ -1333,6 +1333,19 @@ class PlayState extends MusicBeatState {
 			endingSong = true;
 		}
 
+		#if VIDEOS_ALLOWED
+		var video_handler:VideoHandler = new VideoHandler();
+
+		video_handler.finishCallback = () -> {
+			bruhDialogue(endSongVar);
+		};
+
+		video_handler.playVideo(PolymodAssets.getPath(Paths.video(name, ext)));
+		#else
+		bruhDialogue(endSongVar);
+		#end
+	}
+
 	function bruhDialogue(?endSongVar:Bool = false):Void {
 		if (cutscene.cutsceneAfter == null) {
 			if (!endSongVar)
@@ -1550,7 +1563,7 @@ class PlayState extends MusicBeatState {
 
 	var debugNum:Int = 0;
 
-	public function generateSong(dataPath:String):Void {}
+	public function generateSong(dataPath:String):Void {
 		var songData = SONG;
 		Conductor.changeBPM(songData.bpm, songMultiplier);
 
