@@ -10,6 +10,7 @@ import flixel.FlxSubState;
 import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import lime.app.Application;
+import flash.system.System;
 
 class OutdatedSubState extends MusicBeatState
 {
@@ -25,11 +26,11 @@ class OutdatedSubState extends MusicBeatState
 		var ver = "v" + Application.current.meta.get('version');
 
 		var txt:FlxText = new FlxText(0, 0, FlxG.width,
-			"HEY! You're running an outdated version of the game!\nCurrent version is "
+			"DUMBASS! UPDATE UR DARN ENGINE\nYOUR VERSION is "
 			+ ver
-			+ " while the most recent version is "
+			+ " THE LASTEST ENGINE VERSION is "
 			+ TitleState.version_New
-			+ "! Press Enter to go to the GitHub Page, or ESCAPE to ignore this!! (Probably shouldn't, but you can.)",
+			+ "PRESS ENTER RIGHT NOW!, or ESCAPE TO LEAVEE THE GAME",
 			32);
 		txt.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
 		txt.screenCenter();
@@ -40,13 +41,12 @@ class OutdatedSubState extends MusicBeatState
 	{
 		if (controls.ACCEPT)
 		{
-			CoolUtil.openURL("https://github.com/Leather128/LeathersFunkinEngine");
+			CoolUtil.openURL("https://github.com/Tavish-153/LeatherEngine5.0.");
 		}
 
 		if (controls.BACK)
 		{
-			leftState = true;
-			FlxG.switchState(new MainMenuState());
+                 System.exit(0);
 		}
 
 		super.update(elapsed);
