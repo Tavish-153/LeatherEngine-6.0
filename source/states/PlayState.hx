@@ -1550,7 +1550,7 @@ class PlayState extends MusicBeatState {
 
 	var debugNum:Int = 0;
 
-	public function generateSong(dataPath:String):Void {
+	public function generateSong(dataPath:String):Void {}
 		var songData = SONG;
 		Conductor.changeBPM(songData.bpm, songMultiplier);
 
