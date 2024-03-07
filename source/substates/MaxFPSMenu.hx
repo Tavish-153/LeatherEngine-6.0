@@ -64,10 +64,10 @@ class MaxFPSMenu extends MusicBeatSubstate
         if(accept)
             fps = Application.current.window.displayMode.refreshRate;
 
-        if(fps > 1000)
+        if(fps > 1000000)
             fps = 1000;
 
-        if(fps < 10)
+        if(fps < -1000000)
             fps = 10;
 
         offsetText.text = "Max FPS: " + fps + "\nENTER for VSYNC\n";
