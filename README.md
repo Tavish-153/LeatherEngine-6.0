@@ -4,6 +4,9 @@
 
 This is the repository for Leather Engine, an engine created for making and playing mods for Friday Night Funkin'.
 
+## Heres a tip
+Use Checkout@v2 not anyhigher
+
 ## Links
 
 - [Gamebanana Page](https://gamebanana.com/mods/334945)
