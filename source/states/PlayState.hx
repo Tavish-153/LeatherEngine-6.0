@@ -1334,7 +1334,7 @@ class PlayState extends MusicBeatState {
 		}
 
 		#if VIDEOS_ALLOWED
-		var video_handler:VideoHandler = new VideoHandler();
+		var video_handler:VideoPlayer = new VideoPlayer();
 
 		video_handler.finishCallback = () -> {
 			bruhDialogue(endSongVar);
