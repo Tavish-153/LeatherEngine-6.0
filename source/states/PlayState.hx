@@ -1333,19 +1333,6 @@ class PlayState extends MusicBeatState {
 			endingSong = true;
 		}
 
-		#if VIDEOS_ALLOWED
-		var video_handler:Videoplayer = new Videoplayer();
-
-		video_handler.finishCallback = () -> {
-			bruhDialogue(endSongVar);
-		};
-
-		video_handler.playVideo(PolymodAssets.getPath(Paths.video(name, ext)));
-		#else
-		bruhDialogue(endSongVar);
-		#end
-	}
-
 	function bruhDialogue(?endSongVar:Bool = false):Void {
 		if (cutscene.cutsceneAfter == null) {
 			if (!endSongVar)
